@@ -1,0 +1,170 @@
+/* css header  */
+header .collapse .nav-link {
+  color: white;
+  position: relative;
+  transition: all 0.5s;
+}
+
+header .navbar-nav .nav-link.active {
+  color: green;
+}
+
+header .navbar-nav .nav-link.active::before {
+  width: 100%;
+}
+
+header .collapse .nav-link::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 3px;
+  background-color: green;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+header .collapse .nav-item {
+  margin: 0 10px;
+}
+
+header .collapse .nav-link:hover::before {
+  width: 100%;
+}
+
+header .collapse .nav-link:hover {
+  color: green;
+}
+
+/* css carousel  */
+.cyber_carousel .carousel-inner {
+  height: 100vh;
+}
+
+.cyber_carousel .carousel-inner .carousel-caption img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.cyber_carousel .carousel-caption h5 {
+  font-size: 56px;
+}
+
+.cyber_carousel .carousel-caption p {
+  font-size: 24px;
+}
+
+.cyber_carousel .carousel-caption {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  /* background-color: rgba(39, 43, 54, 0.5); */
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  /* top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.cyber_carousel .overlay {
+  background-color: rgba(39, 43, 54, 0.5);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* css project */
+.project .project_content .nav-item button.active{
+  background-color: green;
+  color: white !important;
+  border-color: green !important;
+}
+/* .grid_demo{
+  background-color: blue;
+  height: 100px;
+} */
+.project .project_content .card{
+  border: unset;
+}
+.project .project_content .tab-content .card .card-body{
+  border-radius: 0 0 6px 6px ;
+  transition: all 0.5s;
+  border: 1px solid transparent;
+  border-top: unset;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.project .project_content .tab-content .card:hover .card-body{
+  border-color:  green;
+}
+
+/* css available */
+.available{
+  background-image: url(./../image/3.jpg);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
+}
+.available .avai_overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 10, 12, 0.72);
+}
+.available .container{
+  z-index: 8;
+  position: relative;
+}
+.available .avai_content .avai_item{
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 11.5px );
+  -webkit-backdrop-filter: blur( 11.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 50px 30px;
+}
+.available .avai_item i{
+  color: green;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+/* đoạn code trong @media sẽ hoạt dộng khi các thiết bị có vùng nhìn lớn hơn 1200px */
+/* khi sử dụng max-width, các vùng thiết bị nhỏ hơn sẽ đc viết nằm bên dưới để khi có cùng độ ưu
+ tiên, các selector của vùng thiết bị nhỏ sẽ chiến thắng   */
+@media screen and (min-width: 576px) {
+  .cyber_carousel h5{
+   color: red !important;
+  }
+  .project_title h2{
+    color: orange;
+  }
+}
+/* max-width đc sử dụng khi tạo ra các giao diện cho những thiết bị lớn như màn hình PC, laptop, tv*/
+@media screen and (max-width: 992px){
+  .cyber_carousel h5{
+    font-size: 35px;
+  }
+  header .navbar-brand span{
+    color: red !important ;
+  }
+}
+/* thiết bị di động */
+@media screen and (max-width: 576px){
+  header .navbar-brand span{
+    color: yellow !important;
+  }
+}
